@@ -1,2 +1,6 @@
 # OSS_Senior_Design
-ECE 49595 OSS Senior Design
+Purdue ECE 49595 OSS Senior Design
+
+Team: Aakash Sivasankar, Siya Sharma, Jiaqi Tang
+
+Intro.
