@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - feature/*
+      - 'feature/**'
 
   pull_request:
     branches:
-      - feature/*
+      - 'feature/**'
 
 jobs:
   test:
