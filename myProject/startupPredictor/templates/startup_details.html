@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "api", true);
+xmlhttp.onreadystatechange = function()
+{
+	if (this.readyState == 4 && this.status == 200)
+	{
+		var responseJsonObj = JSON.parse(this.responseText);
+
+		console.log( responseJsonObj.ticker );
+		console.log( responseJsonObj.action );
+
+    p = document.getElementById("result_p");
+    p.innerHTML += ": "+ responseJsonObj.action
+	}
+};
+xmlhttp.send();
+</script>
+{% endblock %}
+
+{% block content %}
+  {% if result %}
+    <p id="result_p">The result is: {{ result }}</p>
+  {% else %}
+    <p id="result_p">No result yet!</p>
+  {% endif %}
+{% endblock %}

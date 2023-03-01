@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Application0Config(AppConfig):
+class startupPredictorConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'application0'
+    name = 'startupPredictor'
