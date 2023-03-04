@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="content">
+    <h1>Get ROI for a Startup</h1>
+    <form method="post">
+      {% csrf_token %}
+      <div class="input-group">
+        <label for="startup-name">Enter Startup Name:</label>
+        <input type="text" id="startup-name" name="startup-name">
+      </div>
+      <div class="button-group">
+        <button type="submit">Get ROI</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
