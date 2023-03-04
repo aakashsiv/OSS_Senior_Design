@@ -1,3 +1,4 @@
 devenv
-myProject/db.sqlite3
-myProject/__pycache__
+myProject
+startupPredictor/__pycache__
+startupPredictor/db.sqlite3
