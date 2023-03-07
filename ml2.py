@@ -24,7 +24,7 @@ def roipred(result):
     model = joblib.load('model.joblib')
 
     #hard coded for c:1
-    company_id = result
+    company_id = 'c:1'
     X_new = pd.DataFrame({'total_rounds': [1], 'ipo': [False], 'age': [1]})
     for cid in X.columns[X.columns.str.startswith('company_id_')]:
         if cid == 'company_id_' + company_id:
@@ -37,4 +37,4 @@ def roipred(result):
 
     y_pred = model.predict(X_new)
 
-    return (y_pred[0] * 1000)
+    return (y_pred[0] * 0.01)
