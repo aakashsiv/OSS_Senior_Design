@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="content">
-    <h1>Get ROI for a Startup</h1>
+<div class="content" style="height: calc(100vh - 100px); overflow-y: auto;">
+    <h1>Discover Your Next Investment Opportunity</h1>
+    <p>Are you searching for the next big thing in the startup world? Look no further - our experts are here to help.
+      Simply enter the name of a startup below and we'll provide you with a detailed report on their potential for
+      success. Our data-driven approach provides a comprehensive analysis that empowers you to make informed
+      investment decisions. Don't wait - start discovering your next investment opportunity today.
+      </p>
     <form method="post">
       {% csrf_token %}
       <div class="input-group">

@@ -23,7 +23,8 @@ xmlhttp.send();
 {% block content %}
   <div class="content">
     <h1>Predictions</h1>
-    <p>The name of the startup you entered is: {{ result }}</p>
+    <p>The expected ROI on your entered startup is: {{ result }} USD.</p>
     <a href="{% url 'roi' %}"><button>Go Back</button></a>
+    <a href="{% url 'model'%}"><button>Get More Details</button></a>
   </div>
 {% endblock %}

@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>{% block title %}StartUp Predictor{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -13,6 +17,8 @@
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'roi' %}">Get ROI</a></li>
+                <li><a href="{% url 'roi' %}">Top Picks</a></li>
+                <li><a href="{% url 'roi' %}">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -23,3 +29,4 @@
     <div class="footer"></div>
 </body>
 </html>
+
