@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>{% block title %}StartUp Predictor{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#startup-name" ).autocomplete({
+            source: "{% url 'autocomplete_org_names' %}",
+            minLength: 3,
+            select: function(event, ui) {
+            $(this).val(ui.item.value);
+            return false;
+             }
+        });
+    } );
+    </script>
+    <script>
+        function redirectToDetails(id) {
+        window.location.href = "/details/" + id;
+    }
+    </script>
+    {% block scripts %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'roi' %}">Get ROI</a></li>
+                <li><a href="{% url 'topPicks' %}">Top Picks</a></li>
+                <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+
