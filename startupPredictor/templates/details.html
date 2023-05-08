@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ organization.organization_name }} | StartUp Predictor{% endblock %}
+
+{% block content %}
+<section id="detail1" style="margin-bottom: 10px;">
+    <h1>{{ organization.organization_name }}</h1>
+    <p>{{ organization.description }}</p>
+    <p>Industries: {{ organization.industries }}</p>
+    <p>Founded: {{ organization.founded_date }}</p>
+    <p>Founders: {{ organization.founders }}</p>
+    <p>Headquarters Location: {{ organization.headquarters_location }}</p>
+    <p>Website: <a href="{{ organization.website }}" style="color:#FEFD97" target="_blank">{{ organization.website }}</a></p>
+</section>
+<section id="detailx">
+      <h2>Funding Details</h2>
+      
+      {% if organization.last_funding_type %}
+        <p>Last Funding Type: {{ organization.last_funding_type }}</p>
+      {% endif %}
+      {% if organization.last_funding_amount_currency_in_usd_field %}
+        <p>Last Funding Amount: {{ organization.last_funding_amount_currency_in_usd_field }}</p>
+      {% endif %}
+      {% if organization.last_equity_funding_type %}
+        <p>Last Equity Funding Type: {{ organization.last_equity_funding_type }}</p>
+      {% endif %}
+      {% if organization.last_equity_funding_amount_currency_in_usd_field %}
+        <p>Last Equity Funding Amount: {{ organization.last_equity_funding_amount_currency_in_usd_field }}</p>
+      {% endif %}
+      {% if organization.total_funding_amount_currency_in_usd_field %}
+        <p>Total Funding Amount: {{ organization.total_funding_amount_currency_in_usd_field }}</p>
+      {% endif %}  
+      {% if organization.total_equity_funding_amount_currency_in_usd_field %}
+        <p>Total Equity Funding Amount: {{ organization.total_equity_funding_amount_currency_in_usd_field }}</p>
+      {% endif %}
+      {% if organization.number_of_funding_rounds %}
+        <p>Number of Funding Rounds: {{ organization.number_of_funding_rounds }}</p>
+      {% endif %}
+      {% if organization.funding_status %}
+        <p>Funding Status: {{ organization.funding_status }}</p>
+      {% endif %}
+      {% if organization.estimated_revenue_range %}
+        <p>Estimated Revenue Range: {{ organization.estimated_revenue_range }}</p>
+      {% endif %}
+  </section>
+{% endblock %}
