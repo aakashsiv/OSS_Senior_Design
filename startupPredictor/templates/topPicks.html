@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Top Picks | StartUp Predictor{% endblock %}
+
+{% block content %}
+
+  <div class="content" style="height: calc(100vh - 100px); overflow-y: auto;">
+    <h1 style="font-size: 125px;margin-top: 0px;">Our Top Picks for Successful Startups</h1>
+    <p style="margin-top: 0px">Investors nowadays are inundated with numerous startups to choose from. It is often a daunting task to choose the right ones to invest in. Fortunately, our data-driven machine learning model offers a solution that enables investors to make informed decisions and maximize their returns. We have compiled a list of the top 10 startups that are predicted to be successful over the next five years. By investing in these startups, you can rest assured that you're making a wise investment decision that will lead to maximum returns. </p>
+  </div> 
+
+  {% for organization in organizations %}
+  {% if forloop.counter0|divisibleby:2 %}
+    <div style="display: flex;  justify-content: center; margin-bottom: 40px;">
+  {% endif %}
+  <div class="card" style="margin-right: 50px; margin-left: 50px;" onclick="redirectToDetails('{{organization.id}}')">
+    <div class="card-content">
+      <h3 class="card-title">{{ organization.organization_name }}</h3>
+      <p class="card-description">_______________</p>
+    </div>
+  </div> 
+  {% if forloop.counter0|add:1|divisibleby:2 or forloop.last %}
+    </div>
+  {% endif %}
+{% endfor %}
+{% endblock %}

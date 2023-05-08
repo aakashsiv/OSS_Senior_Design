@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Get ROI | StartUp Predictor{% endblock %}
+{% block content %}
+<div class="content" style="height: calc(100vh - 100px); overflow-y: auto;">
+    <h1 style="font-size: 125px;margin-top: 250px;">Discover Your Next Investment Opportunity</h1>
+    <p style="margin-top: -30px;">Are you searching for the next big thing in the startup world? Look no further - our model is here to help.
+      Simply enter the name of a startup below and the amount you want to invest (in USD), and we'll provide you with a report on their potential for success. Our data-driven approach provides a comprehensive analysis that empowers you to make informed investment decisions. Don't wait - start discovering your next investment opportunity today.
+      </p>
+    <form method="post">
+      <div class="input-group">
+        <label for="startup-name" style="padding-left: 2.00rem; padding-right: 2.85rem;">Enter Startup Name:</label>
+        <input type="text" id="startup-name" name="startup-name">
+      </div>
+      <div class="input-group">
+        <label for="amount-to-invest">Enter Amount to Invest (USD):</label>
+        <input type="number" id="amount-to-invest" name="amount-to-invest" min="1" step="1.00">
+      </div>
+      <div class="button-group">
+        <button type="submit">Get ROI</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

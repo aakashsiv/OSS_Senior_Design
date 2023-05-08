@@ -1,0 +1,426 @@
+body {
+  font-family: 'Montserrat-Black 900', sans-serif;
+  color: #003D1F;
+  background-color: #FAF5E9;
+}
+
+h1 {
+  font-family: 'Montserrat-Black 900', sans-serif;
+  font-size: 99px;
+  padding:0px 50px;
+}
+
+
+p {
+  font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1300px;
+    margin-bottom: 40px;
+}
+
+button {
+  background-color: #0A6522;
+  color: #FAF5E9;
+  border: none;
+  padding: 10px;
+  font-family: 'Montserrat-Black 900', sans-serif;
+  font-weight: bold;
+  font-size: 2.0em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FAF5E9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+  position: relative; /* add position:relative to the li element */
+}
+
+li ul {
+  position: absolute;
+  left: 0; /* change left to 0 to position the submenu on the left side of the parent menu item */
+  top: 100%; /* set top to 100% to position the submenu below the parent menu item */
+  display: none;
+}
+
+li:hover ul {
+  display: block;
+}
+
+li a {
+  display: block;
+  color: #FAF5E9; /* change link color to green */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #0A6522; /* change background color to ivory */
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #FEFD97;
+  color: #0A6522; /* change link color to ivory */
+}
+
+
+.active {
+  background-color: #4CAF50;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.banner a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.input-group label {
+  font-size: 18px;
+  margin-right: 10px;
+  flex: 0 0 auto;
+}
+
+.input-group input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  max-width: 100%;
+  flex: 1 1 auto;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+/* Invert the button colors */
+.button-group button {
+  background-color: #0A6522;
+  color: #FAF5E9;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #FEFD97;
+  color: #0A6522;
+}
+
+#get-roi-button {
+  display: none;
+}
+
+#error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 20px;
+  width: 300px; /* adjust as needed */
+}
+
+.ui-menu-item {
+  display: block;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* HOMEPAGE */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#startup-predictor {
+  width: 500px; /* Set the width of the predictor */
+  height: 500px; /* Set the height of the predictor */
+  /* Add styles for the predictor */
+}
+
+.developer-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Set up the layout of the sections */
+.section {
+  text-align: center;
+}
+
+section#section1 {
+  background-color: #121212;
+  color:#FEFD97;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px 50px;
+  height: calc(100vh - 120px); 
+}
+
+section#section1 h1 {
+  font-family: 'Montserrat-Black 900', sans-serif;
+  font-size: 110px;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+section#section1 p {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-size: 18px;
+  text-align: right;
+  line-height: 1.5;
+  max-width: 800px;
+  color: #FAF5E9;
+  margin: 0 auto;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+
+#sectionx {
+  background-color: #FAF5E9;
+  color: #003D1F;
+  font-family: 'Montserrat', sans-serif;
+  height: calc(100vh - 60px);
+  padding: 50px 50px;
+}
+
+#sectionx h2 {
+  font-family: 'Montserrat-ExtraBold', sans-serif;
+  font-size: 70px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: -300px;
+}
+
+#sectionx p {
+  font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1300px;
+    margin-bottom: 50px;
+}
+
+#sectionx .subtitle {
+  font-family: 'Montserrat-Medium', sans-serif;
+}
+
+
+#sectiony {
+  background-color: #121212;
+  color: #FAF5E9;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px;
+}
+
+#sectiony h2 {
+    color: #FEFD97;
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    font-size: 70px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: -300px;
+  }
+  
+  #sectiony p {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 1300px;
+    margin-bottom: 50px;
+  }
+
+#sectiony .subtitle {
+  font-family: 'Montserrat-Medium', sans-serif;
+}
+
+
+.loader {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat-Black 900', sans-serif;
+}
+
+.loader p {
+  color: white;
+  font-size: 24px;
+}
+
+.progress-bar {
+  width: 500px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: 3px solid white;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: green;
+  border-radius: 10px;
+}
+
+
+/* Center the cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+/* Style the cards */
+.card {
+  background-color: #121212;
+  border-radius: 50px;
+  margin-top: 40px;
+  overflow: hidden;
+  width: 510px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #FEFD97;
+  font-family: 'Montserrat-Black 900', sans-serif;
+  font-size: 55px;  
+}
+
+.card-description {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Montserrat-Black 900', sans-serif;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background-color: #424242;
+  cursor: pointer;
+}
+
+/* details */
+/* Set up the layout of the details */
+#detail1 {
+  background-color: #121212;
+  color:#FEFD97;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px 50px;
+  height: 100%;
+}
+
+section#detail1 h1 {
+  font-family: 'Montserrat-ExtraBold', sans-serif;
+  font-size: 122px;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 180px;
+  text-transform: uppercase;
+}
+
+section#detail1 p {
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-size: 18px;
+  text-align: right;
+  line-height: 1.5;
+  color: #FAF5E9;
+  margin: 0 auto;
+  margin-right: 30px;
+  margin-bottom: 0px; 
+}
+
+#detailx {
+  background-color: #FAF5E9;
+  color: #003D1F;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  padding: 50px 50px;
+  margin-bottom: 20px;
+}
+
+section#detailx h2 {
+  font-family: 'Montserrat-ExtraBold', sans-serif;
+  font-size: 100px;
+  text-align: right;
+  text-transform: uppercase;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+section#detailx p {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5;
+    margin-left: 50px;
+    margin-bottom: 0px; 
+}
