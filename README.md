@@ -7,9 +7,9 @@ The Start Up Investor is a web-based application designed to provide users with 
 
 ## API Endpoints
 
-### /roi/: This endpoint allows users to input a startup name and investment amount and queries the database to calculate the estimated ROI value.
-### /topPicks/: This endpoint displays the top 10 startup companies with the highest ROI values from the database.
-### /details/id/: This endpoint displays the details of a startup company based on the unique ID assigned to each company in the database. The user doesn't have direct access to all IDs, but they can view details by using the /roi/ endpoint to get details using the names.
+1. /roi/: This endpoint allows users to input a startup name and investment amount and queries the database to calculate the estimated ROI value.
+2. /topPicks/: This endpoint displays the top 10 startup companies with the highest ROI values from the database.
+3. /details/id/: This endpoint displays the details of a startup company based on the unique ID assigned to each company in the database. The user doesn't have direct access to all IDs, but they can view details by using the /roi/ endpoint to get details using the names.
 
 ## Installation and Usage
 
@@ -49,6 +49,6 @@ The following Python packages were used in this project:
 
 ## Contributors
 
-Aakash Sivasankar (https://github.com/aakashsiv) 
-Siya Sharma (https://github.com/siyaduttsharma)
-Jiaqi Tang (https://github.com/KumoK17)
+- Aakash Sivasankar (https://github.com/aakashsiv) 
+- Siya Sharma (https://github.com/siyaduttsharma)
+- Jiaqi Tang (https://github.com/KumoK17)
